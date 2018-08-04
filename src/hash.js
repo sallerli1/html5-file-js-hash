@@ -1,7 +1,7 @@
 const creatHash = require('create-hash')
 const Buffer = require('buffer').Buffer
 
-function hash (FileJS, file, type, callback, encoding = 'hex') {
+function hash (FileJS, file, callback, options, type) {
     const isType = FileJS.util.isType,
         readChucksProm = FileJS.readChucksProm
 
@@ -11,7 +11,7 @@ function hash (FileJS, file, type, callback, encoding = 'hex') {
         options = callback
     }
 
-    const HASH = creatHash(type)
+    const HASH = creatHash(options.type)
         
     return readChucksProm(file, (data, loaded, progress) => {
         if (isType(Function, callback)) {
@@ -23,7 +23,7 @@ function hash (FileJS, file, type, callback, encoding = 'hex') {
         type: 'buffer',
         chuckSize: options && options.chuckSize
     }).then(() => {
-        return HASH.digest(encoding)
+        return HASH.digest(options.encoding)
     })
 }
 
