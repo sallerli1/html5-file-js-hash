@@ -1,0 +1,19 @@
+{
+  "name": "html5-file-js-hash",
+  "version": "1.0.0",
+  "description": "hash plugin for html5-file-js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hash",
+    "html5",
+    "file"
+  ],
+  "author": "sallerli1",
+  "license": "ISC",
+  "dependencies": {
+    "create-hash": "^1.2.0"
+  }
+}
