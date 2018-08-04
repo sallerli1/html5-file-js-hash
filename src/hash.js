@@ -1,7 +1,7 @@
 const creatHash = require('create-hash')
 const Buffer = require('buffer').Buffer
 
-function hash (FileJS, file, type, encoding = 'hex') {
+function hash (FileJS, file, type, callback, encoding = 'hex') {
     const isType = FileJS.isType,
         readChucksProm = FileJS.readChucksProm
 

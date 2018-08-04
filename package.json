@@ -1,5 +1,5 @@
 {
-  "name": "html5-file-js-hash",
+  "name": "html5-file-hash",
   "version": "1.0.0",
   "description": "hash plugin for html5-file-js",
   "main": "src/index.js",
